@@ -1,4 +1,19 @@
 const mongoose = require('mongoose');
+// const QuestionSchema = require('./Question');
+
+const QuestionSchema = mongoose.Schema({
+  word: {
+    type: String,
+    required: true
+  },
+  translation: {
+    type: String,
+    required: true
+  },
+  pronunciation: {
+    type: String
+  }
+});
 
 const SetSchema = mongoose.Schema({
   name: {
@@ -17,20 +32,6 @@ const SetSchema = mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
-  }
-});
-
-const QuestionSchema = mongoose.Schema({
-  word: {
-    type: String,
-    required: true
-  },
-  translation: {
-    type: String,
-    required: true
-  },
-  pronunciation: {
-    type: String
   }
 });
 
