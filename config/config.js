@@ -3,5 +3,6 @@ dotenv.config();
 module.exports = {
   mongoUri: process.env.MONGO_URI,
   jwtSecret: process.env.SECRET,
-  port: process.env.PORT
+  port: process.env.PORT,
+  tokenExpTime: 360000
 };
